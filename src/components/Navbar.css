@@ -1,0 +1,148 @@
+/* Custom dark background for navbar */
+.bg-dark-custom {
+    background-color: #121212 !important; /* Almost black */
+    font-size: 25px;
+  }
+  
+  /* Larger font size for navigation links */
+  .nav-link {
+    font-size: 25px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Soft easing */
+    position: relative;
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.85) !important; /* Slightly softer white */
+    overflow: hidden;
+    border-radius: 10px; /* Более округлые углы для ссылок */
+    border: 1px solid rgba(236, 229, 229, 0.675); /* Добавляем светлую рамку */
+    margin: 0 3px; /* Небольшой отступ между пунктами меню */
+  }
+  
+  /* Button press effect - gentler scale */
+  .nav-link:active {
+    font-size: 25px;
+    transform: scale(0.97);
+    transition: transform 0.2s;
+    border-color: rgba(255, 255, 255, 0.389); /* Более заметная рамка при нажатии */
+  }
+  
+  /* Hover animation - softer glow */
+  .nav-link:hover {
+    font-size: 27px;
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Active link styling - with gray highlight */
+  .nav-link.active {
+    font-weight: 500;
+    color: #fff !important;
+    background-color: #444444; /* Gray highlight color */
+    box-shadow: 0 0 12px rgba(200, 200, 200, 0.3); /* Subtle gray glow */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Active link animation - pulsating border */
+  .nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    animation: pulseBorder 2s infinite;
+  }
+  
+  /* Border pulse animation */
+  @keyframes pulseBorder {
+    0% {
+      border-color: rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      border-color: rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  /* Subtle light effect on active links */
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    top: 0;
+    left: -100px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shineEffect 3s infinite;
+    transform: skewX(-25deg);
+  }
+  
+  /* Shine animation */
+  @keyframes shineEffect {
+    0% {
+      left: -100px;
+    }
+    20% {
+      left: 120%;
+    }
+    100% {
+      left: 120%;
+    }
+  }
+  
+  /* Underline animation on hover - smoother slide-in */
+  .nav-link:not(.active)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; /* Thinner line for subtlety */
+    bottom: 7px;
+    left: 50%; /* Start from center */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent for softness */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth animation curve */
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .nav-link:hover:not(.active)::after {
+    width: 70%; /* Not full width for a softer look */
+  }
+  
+  /* Subtle background highlight on hover */
+  .nav-item {
+    margin: 0 3px;
+    transition: background-color 0.4s ease;
+    border-radius: 10px; /* Более округлые углы для ссылок */
+    border: 1px solid rgba(236, 229, 229, 0.267); /* Добавляем светлую рамку */
+  }
+  
+  /* Ensure the navbar is responsive */
+  @media (max-width: 992px) {
+    .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    /* Adjust spacing for mobile */
+    .nav-item {
+      margin: 2px 0;
+    }
+    
+    /* Center the underline on mobile */
+    .nav-link:not(.active)::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

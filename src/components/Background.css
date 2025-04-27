@@ -1,0 +1,227 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    125deg, 
+    #1a1a2e, 
+    #16213e, 
+    #0f3460, 
+    #1a1a35, 
+    #0a0a22, 
+    #1f1f3d
+  );
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite alternate;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 25%;
+  }
+}
+
+/* Световой эффект */
+.animated-background::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(30, 30, 60, 0.4) 0%,
+    rgba(10, 10, 26, 0.8) 70%
+  );
+  animation: rotateBG 40s linear infinite;
+}
+
+@keyframes rotateBG {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Эффект свечения без расплывающихся кругов */
+.animated-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(50, 70, 120, 0.2) 0%,
+    rgba(30, 30, 60, 0.1) 50%,
+    rgba(90, 50, 100, 0.2) 100%
+  );
+  animation: shiftGradient 15s ease-in-out infinite alternate;
+}
+
+@keyframes shiftGradient {
+  0% {
+    background-position: 0% 0%;
+    opacity: 0.4;
+  }
+  50% {
+    background-position: 100% 100%;
+    opacity: 0.6;
+  }
+  100% {
+    background-position: 0% 0%;
+    opacity: 0.4;
+  }
+}
+
+/* Движущиеся частицы */
+.animated-background .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Создаем блики */
+.animated-background .flare {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+  animation: twinkle 6s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+/* Заменяем вертикальные линии на более тонкие горизонтальные */
+.animated-background .light-line {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  height: 1px;
+  width: 150%;
+  left: -25%;
+  transform-origin: center;
+  animation: moveHorizontalLine 20s ease-in-out infinite;
+  opacity: 0.1; /* Снижаем начальную прозрачность */
+}
+
+@keyframes moveHorizontalLine {
+  0% {
+    transform: translateY(-100px) rotate(var(--rotate-angle));
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--max-opacity);
+  }
+  90% {
+    opacity: var(--max-opacity);
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(var(--rotate-angle));
+    opacity: 0;
+  }
+}
+
+/* Стили для падающих звезд */
+.animated-background .shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 100px;
+  transform-origin: left center;
+  z-index: 5;
+  opacity: 0;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+  animation: shootingStar var(--duration) ease-in forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes shootingStar {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) rotate(var(--angle));
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(var(--travel-x)) translateY(var(--travel-y)) rotate(var(--angle));
+  }
+}
+
+/* Расширенные стили для падающих звезд разного размера */
+.animated-background .shooting-star.large {
+  height: 3px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    -90deg, /* Изменено с 90deg на -90deg */
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.animated-background .shooting-star.medium {
+  height: 2px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    -90deg, /* Изменено с 90deg на -90deg */
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.animated-background .shooting-star.small {
+  height: 1px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  background: linear-gradient(
+    -90deg, /* Изменено с 90deg на -90deg */
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}

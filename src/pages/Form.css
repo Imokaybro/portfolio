@@ -1,0 +1,231 @@
+#one:target {
+  background: rgba(255, 0, 0, 0.297);
+}
+
+#two:target {
+  background: green;
+}
+
+#three:target {
+  background: yellow;
+}
+
+.text-container {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.home-container {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.custom-jumbotron {
+  background-color: rgba(50, 50, 50, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  color: white;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.7s ease;
+}
+
+.custom-jumbotron.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.custom-jumbotron:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.custom-jumbotron.slide-in:hover {
+  transform: translateX(0) translateY(-3px);
+}
+
+.custom-jumbotron .display-4 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+.custom-jumbotron.slide-in .display-4 {
+  opacity: 1;
+  transform: translateY(0);
+  text-align: center;
+}
+
+.custom-jumbotron .display-5 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+.custom-jumbotron.slide-in .display-5 {
+  opacity: 1;
+  transform: translateY(0);
+  text-align: center;
+}
+
+.custom-jumbotron .lead {
+  color: rgba(255, 255, 255, 0.886);
+  font-size: 25px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;
+}
+
+.custom-jumbotron.slide-in .lead {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jobExp {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.accordion {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+  border: 1px solid rgba(80, 80, 80, 0.7);
+  background-color: rgba(45, 45, 45, 0.95);
+}
+
+.accordion-item {
+  border: none;
+  background-color: rgba(45, 45, 45, 0.95);
+  margin-bottom: 1px;
+  overflow: hidden;
+}
+
+.accordion-item,
+.accordion-header,
+.accordion-button,
+.accordion-collapse {
+  border-color: rgba(80, 80, 80, 0.7) !important;
+}
+
+.accordion-button {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white !important;
+  background-color: rgba(50, 50, 50, 0.9) !important;
+  padding: 15px 20px;
+  border: 1px solid rgba(80, 80, 80, 0.7) !important;
+  border-radius: 0 !important;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: rgba(80, 80, 80, 0.7) !important;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  filter: brightness(1);
+}
+
+.accordion-button:not(.collapsed) {
+  color: white !important;
+  background-color: rgba(55, 55, 55, 0.95) !important;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.accordion-button:hover {
+  background-color: rgba(60, 60, 60, 0.95) !important;
+  color: white !important;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.accordion-collapse {
+  border-left: 1px solid rgba(80, 80, 80, 0.7) !important;
+  border-right: 1px solid rgba(80, 80, 80, 0.7) !important;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.7) !important;
+  background-color: rgba(45, 45, 45, 0.95);
+}
+
+.accordion-body {
+  background-color: rgba(45, 45, 45, 0.95);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  backdrop-filter: blur(3px);
+  transition: all 0.3s ease;
+}
+
+.accordion h5 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+.accordion .list-group-item {
+  background-color: rgba(55, 55, 55, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(80, 80, 80, 0.6);
+  margin-bottom: 3px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.accordion .list-group-item:hover {
+  background-color: rgba(65, 65, 65, 0.9);
+  transform: translateX(3px);
+}
+
+.custom-jumbotron .accordion {
+  --bs-accordion-border-color: rgba(80, 80, 80, 0.7);
+  --bs-accordion-bg: rgba(45, 45, 45, 0.95);
+  --bs-accordion-btn-bg: rgba(50, 50, 50, 0.9);
+  --bs-accordion-btn-color: white;
+  --bs-accordion-active-bg: rgba(55, 55, 55, 0.95);
+  --bs-accordion-active-color: white;
+}
