@@ -63,7 +63,7 @@ export const Skills = () => {
                   <ul className="list-group">
                     <li className="list-group-item">Эффективная коммуникативность и умение работать в команде</li>
                     <li className="list-group-item">Аналитическое мышление(критическое) и умение решать проблемы</li>
-                    <li className="list-group-item">Адаптивность к работе в команде и использованием новых технологий</li>
+                    <li className="list-group-item">Адаптивность</li>
                     <li className="list-group-item">Тайм-менеджмент и организация работы</li>
                     <li className="list-group-item">Управленческие навыки и лидерские качества</li>
                     <li className="list-group-item">Гибкость и адаптивность</li>

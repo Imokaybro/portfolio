@@ -10,7 +10,6 @@ import { Examples } from "./pages/Examples";
 import { Links } from "./pages/Links";
 import { Contacts } from "./pages/Contacts";
 
-
 function App() {
   return (
     <>
@@ -19,6 +18,7 @@ function App() {
       <div className="container pt-4">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/job_experience" element={<JobExperience />} />
           <Route path="/skills" element={<Skills />} />

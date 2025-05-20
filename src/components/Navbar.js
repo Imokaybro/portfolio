@@ -50,7 +50,7 @@ export const Navbar = () => (
           className={({isActive}) => isActive ? "nav-link active" : "nav-link"} 
           to="/links"
         >
-          Ссылки и прочая полезная информация
+          Ссылки
         </NavLink>
       </li>
       <li className="nav-item">

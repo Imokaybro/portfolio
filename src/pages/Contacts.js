@@ -23,9 +23,9 @@ export const Contacts = () => {
       >
         <div className="container">
           <h1 className="display-4">Contacts</h1>
-          <p className="lead">
+          <p className="lead-2">
             <div><a href="https://t.me/imokaym" target="_blank">Мой Telegram</a></div>
-            <div><a href="tel:+79610534347">+79610534347</a></div>
+            <div><a href="tel:+79610534347">Телефон для связи +79610534347</a></div>
           </p>
         </div>
       </div>

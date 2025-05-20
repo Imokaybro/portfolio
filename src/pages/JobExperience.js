@@ -100,7 +100,7 @@ export const JobExperience = () => {
         ref={jumbotronRef}
       >
         <div className="jobExp">
-          <li className="list-group-item">Общий опыт работы в IT: {overTime}</li>
+          <div className="display-4">Общий опыт работы в IT: {overTime}</div>
         </div>
         <div className="container">
           <div className="accordion" id="skillsAccordion">
@@ -124,25 +124,27 @@ export const JobExperience = () => {
                 data-bs-parent="#skillsAccordion"
               >
                 <div className="accordion-body">
-                  <div>
+                  <div className="lead">
                     <strong>Должность:</strong> Ведущий тестировщик группы автоматизированного тестирования на JavaScript
+                    <div><br></br></div>
                   </div>
-                  <div>Основные обязанности:</div>
+                  <div className="lead">Основные обязанности:</div>
+                  <div><br></br></div>
                   <ul className="list-group">
-                    <li className="list-group-item">Тестирование WEB + API</li>
-                    <li className="list-group-item">Подготовка, реализация и актуализация артефактов тестирования</li>
-                    <li className="list-group-item">Документирование найденных ошибок в системе баг-трекинга, контроль их исправления</li>
-                    <li className="list-group-item">Тест менеджмент</li>
-                    <li className="list-group-item">Коммуникация с мастер-системами, смежными командами</li>
-                    <li className="list-group-item">Развитие и поддержка автотестов и инфраструктуры</li>
-                    <li className="list-group-item">Проведение код-ревью</li>
-                    <li className="list-group-item">Разработка и актуализация тестов на TypeScript и - Playwright</li>
-                    <li className="list-group-item">Разработка и актуализация тестов на JavaScript и CodeceptJS</li>
-                    <li className="list-group-item">Разработка Helper's для улучшения качества автотестов. Например разработал кастомный воркер с распараллеливанием и балансировщиком с определением приоритета теста</li>
-                    <li className="list-group-item">Поддержка проектов автоматизации в актуальном состоянии с улучшением качества кода(рефакторинг)</li>
-                    <li className="list-group-item">Планирование работ и формирование оценок требующихся ресурсов тестирования по задаче</li>
-                    <li className="list-group-item">Поддержка продукта после релиза</li>
-                    <li className="list-group-item">Сбор и анализ логов, анализ ошибок</li>
+                    <li className="list-group-item">1. Тестирование WEB + API</li>
+                    <li className="list-group-item">2. Подготовка, реализация и актуализация артефактов тестирования</li>
+                    <li className="list-group-item">3. Документирование найденных ошибок в системе баг-трекинга, контроль их исправления</li>
+                    <li className="list-group-item">4. Тест менеджмент</li>
+                    <li className="list-group-item">5. Коммуникация с мастер-системами, смежными командами</li>
+                    <li className="list-group-item">6. Развитие и поддержка автотестов и инфраструктуры</li>
+                    <li className="list-group-item">7. Проведение код-ревью</li>
+                    <li className="list-group-item">8. Разработка и актуализация тестов на TypeScript и - Playwright</li>
+                    <li className="list-group-item">9. Разработка и актуализация тестов на JavaScript и CodeceptJS</li>
+                    <li className="list-group-item">10. Разработка Helper's для улучшения качества автотестов. Например разработал кастомный воркер с распараллеливанием и балансировщиком с определением приоритета теста</li>
+                    <li className="list-group-item">11. Поддержка проектов автоматизации в актуальном состоянии с улучшением качества кода(рефакторинг)</li>
+                    <li className="list-group-item">12. Планирование работ и формирование оценок требующихся ресурсов тестирования по задаче</li>
+                    <li className="list-group-item">13. Поддержка продукта после релиза</li>
+                    <li className="list-group-item">14. Сбор и анализ логов, анализ ошибок</li>
                   </ul>
                 </div>
               </div>
@@ -158,7 +160,7 @@ export const JobExperience = () => {
                   aria-expanded="false" 
                   aria-controls="collapseHard"
                 >
-                  АО "Неофлекс Консалтинг" Стаж с июня 2021г. по март 2022г. <strong> (10 месяцев)</strong>
+                  АО "Неофлекс Консалтинг". Стаж с июня 2021г. по март 2022г. <strong> (10 месяцев)</strong>
                 </button>
               </h2>
               <div 
@@ -168,21 +170,23 @@ export const JobExperience = () => {
                 data-bs-parent="#skillsAccordion"
               >
                 <div className="accordion-body">
-                <div>
+                  <div className="lead">
                     <strong>Должность:</strong> Тестировщик</div>
-                  <div>Основные обязанности:</div>
+                    <div><br></br></div>
+                  <div className="lead">Основные обязанности:</div>
+                  <div><br></br></div>
                   <ul className="list-group">
-                    <li className="list-group-item">Тестирование WEB</li>
-                    <li className="list-group-item">Составление тестовой документации</li>
-                    <li className="list-group-item">Функциональное тестирование</li>
-                    <li className="list-group-item">Интеграционное тестирование</li>
-                    <li className="list-group-item">Инсталляционное тестирование</li>
-                    <li className="list-group-item">Регрессионное тестирование</li>
-                    <li className="list-group-item">Оценка трудозатрат</li>
-                    <li className="list-group-item">Составление отчетов по тестированию</li>
-                    <li className="list-group-item">Ревью кейсов/ридми/ТЗ</li>
-                    <li className="list-group-item">Поддержка продукта после релиза</li>
-                    <li className="list-group-item">Коммуникации с заказчиком доработок</li>
+                    <li className="list-group-item">1. Тестирование WEB</li>
+                    <li className="list-group-item">2. Составление тестовой документации</li>
+                    <li className="list-group-item">3. Функциональное тестирование</li>
+                    <li className="list-group-item">4. Интеграционное тестирование</li>
+                    <li className="list-group-item">5. Инсталляционное тестирование</li>
+                    <li className="list-group-item">6. Регрессионное тестирование</li>
+                    <li className="list-group-item">7. Оценка трудозатрат</li>
+                    <li className="list-group-item">8. Составление отчетов по тестированию</li>
+                    <li className="list-group-item">9. Ревью кейсов/ридми/ТЗ</li>
+                    <li className="list-group-item">10. Поддержка продукта после релиза</li>
+                    <li className="list-group-item">11. Коммуникации с заказчиком доработок</li>
                   </ul>
                 </div>
               </div>
